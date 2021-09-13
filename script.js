@@ -18,7 +18,7 @@ let arrayRandom = [];
 let arrayControl = [];
 
 // FUNZIONI
-const randomNumber = () => Math.floor(Math.random() * 20);
+const randomNumber = () => Math.floor(Math.random() * 100);
 
 const messaggioInizio = () => {
     messaggio.innerText = '';
@@ -40,7 +40,7 @@ const generaArrayRandom = (num) => {
 };
 
 const generaTabella = () => {
-    for(let i = 0; i < 20; i++){
+    for(let i = 0; i < 100; i++){
         div = document.createElement("div");
         div.innerText = [i];
         campo.appendChild(div);
@@ -57,11 +57,11 @@ const distruggiTabella = () => {
 
 const controlStart = () => { 
     if(check[0].checked === false && check[1].checked === false && check[2].checked === false){
-        console.log("seleziona");
+        // console.log("seleziona");
         messaggio.innerText = "Seleziona una difficoltà."
     }else if(check[0].checked){
         messaggioInizio();
-        arrayRandom = generaArrayRandom(2);
+        arrayRandom = generaArrayRandom(20);
         generaTabella();
         console.log(arrayRandom);
     }else if(check[1].checked){
@@ -90,7 +90,7 @@ const occhioAllaMina = (e) => {
             divSconfitta = document.createElement("div");
             divSconfitta.innerText = `Hai schivato le mine per ben ${arrayControl.length - 1} volte!`;
             sconfitta.appendChild(divSconfitta);
-        }else if(arrayControl.length === 20 - arrayRandom.length){
+        }else if(arrayControl.length === 100 - arrayRandom.length){
             console.log('hai vinto');
             campo.style.display = "none";
             vittoria.style.display = "block";
