@@ -14,6 +14,7 @@ const headerBottom = document.getElementById("header-bottom");
 //VARIABILI
 let div;
 let divSconfitta;
+// let count = 0;
 let arrayRandom = [];
 let arrayControl = [];
 
@@ -42,6 +43,9 @@ const generaArrayRandom = (num) => {
 const generaTabella = () => {
     for(let i = 0; i < 100; i++){
         div = document.createElement("div");
+        div.style.display = "flex";
+        div.style.alignItems = "center";
+        div.style.justifyContent = "center";
         div.innerText = [i];
         campo.appendChild(div);
         campo.style.display = "flex";
@@ -55,9 +59,194 @@ const distruggiTabella = () => {
     });
 };
 
+const controlloMine = (element) => {
+    if(Number(element.textContent) === 0){
+        let count = 0;
+        if(arrayRandom.includes(Number(element.textContent) + 1)){
+            count += 1;          
+        }
+        if(arrayRandom.includes(Number(element.textContent) + 10)){
+            count += 1;
+        }
+        if(arrayRandom.includes(Number(element.textContent) + 11)){
+            count += 1;
+        }
+        if(count !== 0){
+            element.innerText = count;
+            element.style.color = "black";
+        }
+    }else if(Number(element.textContent) === 90){
+        let count = 0;
+        if(arrayRandom.includes(Number(element.textContent) + 1)){
+            count += 1;          
+        }
+        if(arrayRandom.includes(Number(element.textContent) - 10)){
+            count += 1;
+        }
+        if(arrayRandom.includes(Number(element.textContent) - 9)){
+            count += 1;
+        }
+        if(count !== 0){
+            element.innerText = count;
+            element.style.color = "black";
+        }
+    }else if(Number(element.textContent) === 99){
+        let count = 0;
+        if(arrayRandom.includes(Number(element.textContent) - 1)){
+            count += 1;          
+        }
+        if(arrayRandom.includes(Number(element.textContent) - 10)){
+            count += 1;
+        }
+        if(arrayRandom.includes(Number(element.textContent) - 11)){
+            count += 1;
+        }
+        if(count !== 0){
+            element.innerText = count;
+            element.style.color = "black";
+        }
+    }else if(Number(element.textContent) === 9){
+        let count = 0;
+        if(arrayRandom.includes(Number(element.textContent) - 1)){
+            count += 1;          
+        }
+        if(arrayRandom.includes(Number(element.textContent) + 10)){
+            count += 1;
+        }
+        if(arrayRandom.includes(Number(element.textContent) + 9)){
+            count += 1;
+        }
+        if(count !== 0){
+            element.innerText = count;
+            element.style.color = "black";
+        }
+    }else if(Number(element.textContent) === 10 || Number(element.textContent) === 20 || Number(element.textContent) === 30 ||
+    Number(element.textContent) === 40 || Number(element.textContent) === 50 || Number(element.textContent) === 60 || Number(element.textContent) === 70 ||
+    Number(element.textContent) === 80){
+        let count = 0;
+        if(arrayRandom.includes(Number(element.textContent) + 1)){
+            count += 1;          
+        }
+        if(arrayRandom.includes(Number(element.textContent) - 10)){
+            count += 1;
+        }
+        if(arrayRandom.includes(Number(element.textContent) - 9)){
+            count += 1;
+        }
+        if(arrayRandom.includes(Number(element.textContent) + 10)){
+            count += 1;          
+        }
+        if(arrayRandom.includes(Number(element.textContent) + 11)){
+            count += 1;
+        }
+        if(count !== 0){
+            element.innerText = count;
+            element.style.color = "black";
+        }   
+    }else if(Number(element.textContent) === 1 || Number(element.textContent) === 2 || Number(element.textContent) === 3 ||
+    Number(element.textContent) === 4 || Number(element.textContent) === 5 || Number(element.textContent) === 6 || Number(element.textContent) === 7 ||
+    Number(element.textContent) === 8){
+        let count = 0;
+        if(arrayRandom.includes(Number(element.textContent) + 1)){
+            count += 1;          
+        }
+        if(arrayRandom.includes(Number(element.textContent) - 1)){
+            count += 1;
+        }
+        if(arrayRandom.includes(Number(element.textContent) + 9)){
+            count += 1;
+        }
+        if(arrayRandom.includes(Number(element.textContent) + 10)){
+            count += 1;          
+        }
+        if(arrayRandom.includes(Number(element.textContent) + 11)){
+            count += 1;
+        }
+        if(count !== 0){
+            element.innerText = count;
+            element.style.color = "black";
+        }
+    }else if(Number(element.textContent) === 19 || Number(element.textContent) === 29 || Number(element.textContent) === 39 ||
+    Number(element.textContent) === 49 || Number(element.textContent) === 59 || Number(element.textContent) === 69 || Number(element.textContent) === 79 ||
+    Number(element.textContent) === 89){
+        let count = 0;
+        if(arrayRandom.includes(Number(element.textContent) - 1)){
+            count += 1;          
+        }
+        if(arrayRandom.includes(Number(element.textContent) - 10)){
+            count += 1;
+        }
+        if(arrayRandom.includes(Number(element.textContent) - 11)){
+            count += 1;
+        }
+        if(arrayRandom.includes(Number(element.textContent) + 10)){
+            count += 1;          
+        }
+        if(arrayRandom.includes(Number(element.textContent) + 9)){
+            count += 1;
+        }
+        if(count !== 0){
+            element.innerText = count;
+            element.style.color = "black";
+        }
+    }else if(Number(element.textContent) === 91 || Number(element.textContent) === 92 || Number(element.textContent) === 93 ||
+    Number(element.textContent) === 94 || Number(element.textContent) === 95 || Number(element.textContent) === 96 || Number(element.textContent) === 97 ||
+    Number(element.textContent) === 98){
+        let count = 0;
+        if(arrayRandom.includes(Number(element.textContent) - 1)){
+            count += 1;          
+        }
+        if(arrayRandom.includes(Number(element.textContent) + 1)){
+            count += 1;
+        }
+        if(arrayRandom.includes(Number(element.textContent) - 11)){
+            count += 1;
+        }
+        if(arrayRandom.includes(Number(element.textContent) - 10)){
+            count += 1;          
+        }
+        if(arrayRandom.includes(Number(element.textContent) - 9)){
+            count += 1;
+        }
+        if(count !== 0){
+            element.innerText = count;
+            element.style.color = "black";
+        }
+    }else{
+        let count = 0;
+        if(arrayRandom.includes(Number(element.textContent) - 1)){
+            count += 1;          
+        }
+        if(arrayRandom.includes(Number(element.textContent) + 1)){
+            count += 1;
+        }
+        if(arrayRandom.includes(Number(element.textContent) - 11)){
+            count += 1;
+        }
+        if(arrayRandom.includes(Number(element.textContent) - 10)){
+            count += 1;          
+        }
+        if(arrayRandom.includes(Number(element.textContent) - 9)){
+            count += 1;
+        }
+        if(arrayRandom.includes(Number(element.textContent) + 11)){
+            count += 1;
+        }
+        if(arrayRandom.includes(Number(element.textContent) + 10)){
+            count += 1;          
+        }
+        if(arrayRandom.includes(Number(element.textContent) + 9)){
+            count += 1;
+        }
+        if(count !== 0){
+            element.innerText = count;
+            element.style.color = "black";
+        }
+    }
+}
+
 const controlStart = () => { 
     if(check[0].checked === false && check[1].checked === false && check[2].checked === false){
-        // console.log("seleziona");
         messaggio.innerText = "Seleziona una difficoltà."
     }else if(check[0].checked){
         messaggioInizio();
@@ -88,6 +277,7 @@ const occhioAllaMina = (e) => {
             sconfitta.style.display = "block";
             riprova.style.display = "block";
             divSconfitta = document.createElement("div");
+            headerBottom.innerText ="Corsa finita!!!"
             divSconfitta.innerText = `Hai schivato le mine per ben ${arrayControl.length - 1} volte!`;
             sconfitta.appendChild(divSconfitta);
         }else if(arrayControl.length === 100 - arrayRandom.length){
@@ -95,11 +285,13 @@ const occhioAllaMina = (e) => {
             campo.style.display = "none";
             vittoria.style.display = "block";
             applausi.style.display = "block";
+            headerBottom.innerText ="Corsa finita!!!"
             riprova.style.display = "block";
         }else{
             e.target.style.backgroundColor = "green";
             e.target.style.color = "green";
             e.target.style.cursor = "not-allowed";
+            controlloMine(e.target);
         }
     }
 };
