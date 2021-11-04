@@ -1,77 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campo Minato</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./src/css/style.css">
 </head>
 <body>
 
     <div class="container">
 
-        <header>
-            
-            <h1>Benvenuti nel campo minato!!!</h1>
+        <h1>Benvenuto a Campo Minato</h1>
 
-            <div id="header-top">
-                <div>Per giocare a campo minato seleziona una difficoltà, hai 3 possibilità, all' aumentare della difficoltà
-                    aumenteranno
-                    le mine!
-                </div>
-                <div id="radio">
-                
-                    <label for="game">Facile</label>
-                    <input type="radio" name="game" class="radioCheck">
-                    <label for="game">Medio</label>
-                    <input type="radio" name="game" class="radioCheck">
-                    <label for="game">Difficile</label>
-                    <input type="radio" name="game" class="radioCheck">
-                
-                </div>
-                
-                <div id="button">GIOCA</div>
-                
-                <div id="messaggio"></div>
-            </div>
+        <div id="campo-minato" class="show-flex">
 
-            <div id="header-bottom">
+        </div>
 
-            </div>
-            
-            
-        </header>
+        <div id="vittoria">
+            <img src="./src/image/vittoria.gif" alt="">
+        </div>
 
-        <main>
+        <div id="sconfitta">
+            <img src="./src/image/bomba.gif" alt="">
+        </div>
 
-            <section id="section1">
+        <div id="risultato">
 
-                <div></div>
+        </div>
 
-                <div><img src="./image/bomba.gif" alt=""></div>
-
-                <div><img src="./image/vittoria.gif" alt=""></div>
-
-            </section>
-
-            <section id="section2">
-
-                <div id="sconfitta">Sei esploso ahahahahahahahahah!!!!!!!</div>
-
-                <div id="vittoria">Incredibile........HAI VINTO!!!</div>
-
-                <div id="button2">RIPROVA</div>
-
-            </section>
-
-        </main>
+        <div id="retry-btn">
+            RIPROVA
+        </div>
 
     </div>
     
-
-
-
-    <script src="script.js"></script>
+    <script type="module">
+        import App from './src/app/index.js';
+        document.addEventListener('DOMContentLoaded', e => App())
+    </script>
+    
 </body>
 </html>
