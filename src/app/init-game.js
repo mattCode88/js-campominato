@@ -36,7 +36,7 @@ function inizioGioco(e, DOM, elementiDiGioco) {
 
         if (elementiDiGioco.arrayControllo.length === 80) {
             DOM.campoMinato.classList.add('hide');
-            DOM.vittoria.classList.add('show');
+            DOM.vittoria.classList.replace('hide', 'show');
             DOM.risultato.innerText = `Hai vinto!!! Sei riuscito a schivare tutte le bombe!!!`;
         }
 
@@ -47,7 +47,7 @@ function inizioGioco(e, DOM, elementiDiGioco) {
     } else {
 
         DOM.campoMinato.classList.add('hide');
-        DOM.sconfitta.classList.add('show');
+        DOM.sconfitta.classList.replace('hide', 'show');
         DOM.risultato.innerText = `Peccato...${elementiDiGioco.arrayControllo.length} bombe schivate!`
 
     }

@@ -1,7 +1,6 @@
 export function creaBombe() {
     let numeroRandom = randomNumber(), array = [];
     generaArrayRandom(array, numeroRandom);
-    // console.log(array.sort())
     return array;
 }
 
